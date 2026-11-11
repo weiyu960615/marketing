@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大二影展專題｜城中異客：《泰想續！東協大冒險》</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Zen Maru Gothic & Noto Sans TC for a cute, bright aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cute: {
+                            bg: '#FFFDF9',
+                            card: '#FFFFFF',
+                            primary: '#FF85A2',
+                            primaryHover: '#FF6B8B',
+                            secondary: '#FFC0D3',
+                            yellow: '#FFE699',
+                            mint: '#A8E6CF',
+                            blue: '#B5E2FA',
+                            text: '#4A3E3D',
+                            muted: '#8C7A79',
+                            border: '#FFE3EC'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Zen Maru Gothic', 'Noto Sans TC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FFFDF9;
+            color: #4A3E3D;
+            background-image: radial-gradient(#FFC0D3 0.75px, transparent 0.75px), radial-gradient(#FFC0D3 0.75px, #FFFDF9 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+        .cute-card {
+            background: #FFFFFF;
+            border: 2.5px solid #FFE3EC;
+            box-shadow: 0 8px 20px -6px rgba(255, 133, 162, 0.15);
+            border-radius: 2rem;
+        }
+        .cute-card-yellow {
+            background: #FFFDF0;
+            border: 2.5px solid #FFE699;
+            box-shadow: 0 8px 20px -6px rgba(255, 230, 153, 0.3);
+            border-radius: 2rem;
+        }
+        .cute-card-mint {
+            background: #F2FAF5;
+            border: 2.5px solid #C1E1C1;
+            box-shadow: 0 8px 20px -6px rgba(168, 230, 207, 0.3);
+            border-radius: 2rem;
+        }
+        .cute-pill {
+            background-color: #FFE3EC;
+            color: #FF477E;
+            border-radius: 9999px;
+        }
+        .cute-button {
+            background: linear-gradient(135deg, #FF85A2 0%, #FF5C8A 100%);
+            box-shadow: 0 6px 15px rgba(255, 133, 162, 0.4);
+        }
+        .cute-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 133, 162, 0.5);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-cute-primary selection:text-white">
+
+    <!-- 頂部可愛導覽列 -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b-2 border-cute-border shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#top" class="flex items-center gap-3 group">
+                <span class="w-12 h-12 rounded-2xl bg-cute-yellow flex items-center justify-center text-xl shadow-md transform group-hover:rotate-6 transition-transform">✨</span>
+                <div class="flex flex-col">
+                    <span class="font-black text-xl tracking-wide text-cute-primary">城中異客</span>
+                    <span class="text-[11px] text-cute-muted font-bold tracking-wider">ASEAN SQUARE FILM PROJECT</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-6 text-sm font-bold text-cute-text">
+                <a href="#hero" class="hover:text-cute-primary transition-colors">專題首頁</a>
+                <a href="#highlights" class="hover:text-cute-primary transition-colors">策展亮點</a>
+                <a href="#feedback" class="hover:text-cute-primary transition-colors">評審建議</a>
+                <a href="#storyboard" class="hover:text-cute-primary transition-colors">升級分鏡</a>
+                <a href="#director-learnings" class="hover:text-cute-primary transition-colors">導演反思</a>
+            </nav>
+
+            <a href="#storyboard" class="cute-button text-white px-6 py-2.5 rounded-full font-bold text-xs tracking-wider uppercase transition-all">
+                🎈 企劃分鏡案
+            </a>
+        </div>
+    </header>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-28 pb-16 flex flex-col lg:flex-row gap-8">
+        
+        <!-- 左側邊欄選單 -->
+        <aside class="lg:w-72 flex-shrink-0">
+            <div class="sticky top-28 space-y-6">
+                <div class="cute-card p-6">
+                    <h3 class="text-xs font-black text-cute-primary tracking-widest uppercase mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-star text-cute-yellow"></i> 章節導覽
+                    </h3>
+                    <ul class="space-y-2 text-sm font-bold">
+                        <li><a href="#hero" class="flex items-center gap-2 py-2 px-3 rounded-xl text-cute-text hover:bg-cute-border hover:text-cute-primary transition-all"><span>01</span> 專題簡介</a></li>
+                        <li><a href="#highlights" class="flex items-center gap-2 py-2 px-3 rounded-xl text-cute-text hover:bg-cute-border hover:text-cute-primary transition-all"><span>02</span> 策展亮點</a></li>
+                        <li><a href="#feedback" class="flex items-center gap-2 py-2 px-3 rounded-xl text-cute-text hover:bg-cute-border hover:text-cute-primary transition-all"><span>03</span> 評審教授建議</a></li>
+                        <li><a href="#storyboard" class="flex items-center gap-2 py-2 px-3 rounded-xl text-cute-text hover:bg-cute-border hover:text-cute-primary transition-all"><span>04</span> 升級分鏡規劃</a></li>
+                        <li><a href="#director-learnings" class="flex items-center gap-2 py-2 px-3 rounded-xl text-cute-text hover:bg-cute-border hover:text-cute-primary transition-all"><span>05</span> 導演反思學習</a></li>
+                        <li><a href="#team-section" class="flex items-center gap-2 py-2 px-3 rounded-xl text-cute-text hover:bg-cute-border hover:text-cute-primary transition-all"><span>06</span> 行銷 STP 策略</a></li>
+                    </ul>
+                </div>
+
+                <div class="cute-card-yellow p-6 text-center">
+                    <div class="text-3xl mb-2">✈️</div>
+                    <h4 class="text-xs font-black text-amber-600 uppercase tracking-wider mb-2">封底終結金句 (Slogan)</h4>
+                    <p class="font-black text-base text-cute-text leading-snug mb-3">
+                        《泰想續！東協大冒險》<br>
+                        <span class="text-xs font-bold text-amber-700">免機票直飛 舊城區的微出國提案</span>
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 justify-center">
+                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-white text-amber-600 border border-amber-200">#低門檻微出國</span>
+                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-white text-amber-600 border border-amber-200">#多元文化探索</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 主要內容區域 -->
+        <main class="flex-1 space-y-10">
+
+            <!-- 01 HERO Banner -->
+            <section id="hero" class="relative cute-card p-8 md:p-10 bg-gradient-to-br from-white via-cute-bg to-cute-border/40 overflow-hidden">
+                <div class="relative z-10 space-y-4">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cute-border text-xs font-bold text-cute-primary">
+                        <span>🎀 大二行銷影展專案</span>
+                        <span>•</span>
+                        <span>逢甲大學行銷學系</span>
+                    </div>
+                    <h1 class="text-3xl md:text-4xl font-black text-cute-text tracking-wide">
+                        城中異客：<span class="text-cute-primary">《泰想續！東協大冒險》</span>
+                    </h1>
+                    <p class="text-cute-muted text-sm md:text-base font-bold leading-relaxed max-w-2xl">
+                        原來我們與異國的距離，只有一步之遙！翻轉舊城區治安負面標籤，以青年「微出國」視角重新定價臺中東協廣場，帶領同儕解鎖零門檻的異國文化探索之旅。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 02 核心策展亮點 -->
+            <section id="highlights" class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl">🌟</span>
+                    <h2 class="text-2xl font-black text-cute-text">專題策展亮點</h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-5">
+                    <div class="cute-card p-6 hover:scale-[1.02] transition-transform">
+                        <div class="w-10 h-10 rounded-2xl bg-cute-secondary text-cute-primary flex items-center justify-center font-black text-base mb-3">01</div>
+                        <h3 class="text-base font-black text-cute-text mb-2">垂直一站式聚落</h3>
+                        <p class="text-xs font-bold text-cute-muted leading-relaxed">集結印尼、越南、菲律賓與泰國多元服務，從通訊、生鮮超市到道地美食街，具備極高文化多樣性與真實生活感。</p>
+                    </div>
+
+                    <div class="cute-card p-6 hover:scale-[1.02] transition-transform">
+                        <div class="w-10 h-10 rounded-2xl bg-cute-yellow text-amber-700 flex items-center justify-center font-black text-base mb-3">02</div>
+                        <h3 class="text-base font-black text-cute-text mb-2">打破資訊隔閡</h3>
+                        <p class="text-xs font-bold text-cute-muted leading-relaxed">問卷調查發現逾八成青年疑慮來自長輩與網路二手傳聞；企劃透過視覺短影音為場域除魅，建立同儕探索安全感。</p>
+                    </div>
+
+                    <div class="cute-card p-6 hover:scale-[1.02] transition-transform">
+                        <div class="w-10 h-10 rounded-2xl bg-cute-mint text-emerald-800 flex items-center justify-center font-black text-base mb-3">03</div>
+                        <h3 class="text-base font-black text-cute-text mb-2">大學生平替旅行</h3>
+                        <p class="text-xs font-bold text-cute-muted leading-relaxed">鎖定預算有限但渴望新鮮體驗的大學生，主打「免買機票、300~500 元打包全套異國旅行」的高 CP 值提案。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 03 評審教授反饋與改進建議 -->
+            <section id="feedback" class="cute-card p-6 md:p-8 space-y-6">
+                <div class="flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-2xl bg-cute-border flex items-center justify-center text-cute-primary text-xl"><i class="fa-solid fa-comments"></i></span>
+                    <div>
+                        <h2 class="text-xl font-black text-cute-text">評審教授建議與指導</h2>
+                        <p class="text-xs font-bold text-cute-muted">評分教授：李悅端 / 李律 導師評語彙整</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div class="cute-card-yellow p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-black text-amber-800 uppercase tracking-wider">李悅端 教授點評</span>
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-white text-emerald-600 border border-emerald-200">低門檻微出國 - Good</span>
+                        </div>
+                        <ul class="text-xs font-bold text-cute-text space-y-2 list-disc list-inside leading-relaxed">
+                            <li><strong class="text-amber-900">避免流於表層：</strong>建議加入 Zoom in 特寫、深度對話或口白設計，深入介紹食物與商品獨特性。</li>
+                            <li><strong class="text-amber-900">聲音立體度：</strong>配樂隨劇情改變很好，建議疊加廣場真實環境聲響與音效（如廣播、叫賣聲）。</li>
+                            <li><strong class="text-amber-900">結尾與 Slogan：</strong>結尾偏弱，需思考如何吸引觀眾行動，至少將 Slogan 放在對的位置並停留足夠時間。</li>
+                        </ul>
+                    </div>
+
+                    <div class="cute-card-mint p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-black text-emerald-800 uppercase tracking-wider">李律 老師點評</span>
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-white text-amber-600 border border-amber-200">節奏運鏡佳</span>
+                        </div>
+                        <ul class="text-xs font-bold text-cute-text space-y-2 list-disc list-inside leading-relaxed">
+                            <li><strong class="text-emerald-900">畫質優化：</strong>粒子與解析度在大螢幕上顯得粗糙，需重新調整輸出碼率（Bitrate）與對焦。</li>
+                            <li><strong class="text-emerald-900">道具比例：</strong>手繪機票很可愛，但應微調為標準長條型登機證比例（16:7）以增強視覺真實感。</li>
+                            <li><strong class="text-emerald-900">情感共鳴：</strong>結尾稍微無聊，重拍時可重新構思具備溫度與情感共鳴的溫馨收尾。</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 04 升級版精簡分鏡規劃 (Storyboard) -->
+            <section id="storyboard" class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl">🎬</span>
+                    <h2 class="text-2xl font-black text-cute-text">期末重拍升級版：三段式精簡分鏡規劃</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- 第一段 -->
+                    <div class="cute-card p-6 flex flex-col md:flex-row gap-5 items-start">
+                        <div class="flex md:flex-col justify-between items-center md:items-start gap-2">
+                            <span class="px-3 py-1 rounded-full bg-cute-primary text-white text-xs font-black">ACT 1</span>
+                            <span class="text-xs font-bold text-cute-muted">00:00 - 00:18</span>
+                        </div>
+                        <div class="space-y-2 flex-1">
+                            <h3 class="text-base font-black text-cute-text">
+                                【慢節奏鋪陳】水果攤熱帶日常與感官震撼
+                            </h3>
+                            <p class="text-xs font-bold text-cute-muted leading-relaxed">
+                                <strong class="text-cute-primary">分鏡：</strong>全景慢慢 Pan 過一樓東南亞水果攤，Zoom in 特寫老闆切開紅毛丹與山竹果肉。<br>
+                                <strong class="text-cute-primary">深度對話：</strong>心怡好奇問奇特水果，小安說明這不只是食物，更是移工「家鄉的味道」，點出東協是「被完整移植的熱帶生活圈」。<br>
+                                <strong class="text-cute-primary">聲音：</strong>疊加低沉市場背景風聲與切水果環境音（Ambient Sound）。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 第二段 -->
+                    <div class="cute-card p-6 flex flex-col md:flex-row gap-5 items-start">
+                        <div class="flex md:flex-col justify-between items-center md:items-start gap-2">
+                            <span class="px-3 py-1 rounded-full bg-cute-yellow text-amber-800 text-xs font-black">ACT 2</span>
+                            <span class="text-xs font-bold text-cute-muted">00:18 - 01:00</span>
+                        </div>
+                        <div class="space-y-2 flex-1">
+                            <h3 class="text-base font-black text-cute-text">
+                                【快節奏爆發】超市 POV 挖寶與深度文化探索
+                            </h3>
+                            <p class="text-xs font-bold text-cute-muted leading-relaxed">
+                                <strong class="text-cute-primary">分鏡：</strong>重拍高節奏快切！第一人稱 POV 掃貨，進入二樓超市特寫異國醬料與零食。<br>
+                                <strong class="text-cute-primary">深度對話：</strong>心怡發覺：「大家不是來觀光，是真的在這裡過日子！」小安回覆：「對，這裡是移工們離鄉背井的第二個家，也是最酷的跨文化聚落。」<br>
+                                <strong class="text-cute-primary">音效：</strong>快門聲、金屬碰撞聲與輕快節奏音樂突變（Beat Drop）。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 第三段 -->
+                    <div class="cute-card-yellow p-6 flex flex-col md:flex-row gap-5 items-start border-2 border-amber-300">
+                        <div class="flex md:flex-col justify-between items-center md:items-start gap-2">
+                            <span class="px-3 py-1 rounded-full bg-amber-400 text-amber-900 text-xs font-black">ACT 3</span>
+                            <span class="text-xs font-bold text-cute-muted">01:00 - 01:15</span>
+                        </div>
+                        <div class="space-y-2 flex-1">
+                            <h3 class="text-base font-black text-cute-text">
+                                【溫馨收尾】黑幕定格與 Slogan 停留
+                            </h3>
+                            <p class="text-xs font-bold text-cute-muted leading-relaxed">
+                                <strong class="text-amber-800">分鏡：</strong>兩人在綠川邊咬著越南麵包相視大笑，將長條手繪機票翻面（寫著「無限期續攤券」）。畫面瞬間切為全黑幕。<br>
+                                <strong class="text-amber-800">Slogan 展示：</strong>黑幕中央靜止停留 4-5 秒，浮現乾淨文字：<br>
+                                <span class="font-black text-cute-primary text-sm tracking-wide">《泰想續！東協大冒險》—— 免機票直飛 舊城區的微出國提案</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 05 導演職務的反思與學習 -->
+            <section id="director-learnings" class="cute-card p-6 md:p-8 space-y-6">
+                <div class="flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-2xl bg-cute-secondary flex items-center justify-center text-cute-primary text-xl"><i class="fa-solid fa-clapperboard"></i></span>
+                    <div>
+                        <h2 class="text-xl font-black text-cute-text">從「導演職務」中學習到的核心體悟</h2>
+                        <p class="text-xs font-bold text-cute-muted">執導《城中異客》企劃短片的拍攝調度與思維成長</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div class="bg-white p-5 rounded-2xl border-2 border-cute-border space-y-2">
+                        <h3 class="text-sm font-black text-cute-primary flex items-center gap-2">
+                            <span>💡</span> 1. 影像不只是畫面，更要講好故事
+                        </h3>
+                        <p class="text-xs font-bold text-cute-muted leading-relaxed">
+                            初次剪輯時過度專注於運鏡流暢與快節奏，導致畫面「順順過去」卻缺乏記憶點。體會到導演必須在視覺之上賦予故事「情感與衝突」，透過人設反差與深度對話才能引起真正共鳴。
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border-2 border-cute-border space-y-2">
+                        <h3 class="text-sm font-black text-cute-primary flex items-center gap-2">
+                            <span>🔍</span> 2. 深入地景本質，拒絕流於表層
+                        </h3>
+                        <p class="text-xs font-bold text-cute-muted leading-relaxed">
+                            導演需要具備田野調查者的眼睛。原本拍攝僅停留在吃喝玩樂，反思後發現，東協廣場的獨特性在於「移工生活圈與熱帶文化移植」。導演出鏡台詞必須傳達這個核心價值，才具備行銷厚度。
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border-2 border-cute-border space-y-2">
+                        <h3 class="text-sm font-black text-cute-primary flex items-center gap-2">
+                            <span>🎧</span> 3. 聽覺環境聲與節奏調度的力量
+                        </h3>
+                        <p class="text-xs font-bold text-cute-muted leading-relaxed">
+                            學會善用「慢鋪陳 ➔ 快爆發」的反差節奏，並深刻理解到聲音（如廣場廣播、切水果聲、叫賣音效）佔了沉浸感的一半。好的導演懂得同時運用視覺與聲景（Soundscape）來勾勒氛圍。
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border-2 border-cute-border space-y-2">
+                        <h3 class="text-sm font-black text-cute-primary flex items-center gap-2">
+                            <span>🎯</span> 4. 結尾行動呼籲（CTA）與留白哲學
+                        </h3>
+                        <p class="text-xs font-bold text-cute-muted leading-relaxed">
+                            影片結尾不能倉促結束，必須給觀眾沉澱的空檔。學會將 Slogan 放置在黑幕中央並留白 3-5 秒，讓視覺與訊息達到最強烈的記憶點留存。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 06 行銷 STP 策略架構 -->
+            <section id="team-section" class="cute-card p-6 md:p-8 space-y-6">
+                <div class="flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-2xl bg-cute-yellow flex items-center justify-center text-amber-800 text-xl"><i class="fa-solid fa-chart-pie"></i></span>
+                    <div>
+                        <h2 class="text-xl font-black text-cute-text">行銷策略架構 (STP)</h2>
+                        <p class="text-xs font-bold text-cute-muted">以嚴謹行銷理論支撐《城中異客》企劃定位</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-5">
+                    <div class="bg-white p-5 rounded-2xl border-2 border-cute-border">
+                        <span class="text-[10px] font-black px-2.5 py-1 rounded-full bg-cute-border text-cute-primary">S - SEGMENTATION</span>
+                        <h3 class="text-base font-black text-cute-text my-2">市場區隔</h3>
+                        <p class="text-xs font-bold text-cute-muted leading-relaxed">依「文化涉入度」與「價格敏感度」交叉分析，鎖定渴望接觸異國文化但預算有限的青年族群。</p>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border-2 border-cute-border">
+                        <span class="text-[10px] font-black px-2.5 py-1 rounded-full bg-cute-yellow text-amber-800">T - TARGETING</span>
+                        <h3 class="text-base font-black text-cute-text my-2">目標客群</h3>
+                        <p class="text-xs font-bold text-cute-muted leading-relaxed">18-24 歲中部大專院校學生，重視高 CP 值、極易受社群短影音與同儕結伴探索影響。</p>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border-2 border-cute-border">
+                        <span class="text-[10px] font-black px-2.5 py-1 rounded-full bg-cute-mint text-emerald-800">P - POSITIONING</span>
+                        <h3 class="text-base font-black text-cute-text my-2">市場定位</h3>
+                        <p class="text-xs font-bold text-cute-muted leading-relaxed">高密度跨國元素 × 垂直複合空間，全臺唯一的「垂直一站式跨國微出國聚落」。</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="border-t-2 border-cute-border bg-white py-8 text-center text-xs font-bold text-cute-muted">
+        <p>&copy; 2026 大二影展專題成果發表 ｜ 學號：D1483966 ｜ 逢甲大學行銷學系</p>
+    </footer>
+
+</body>
+</html>
